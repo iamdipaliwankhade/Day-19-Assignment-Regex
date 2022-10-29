@@ -27,16 +27,15 @@ public class UserRegistration {
 		String inputmobileNumber = sc.next();
 
 		System.out.println("Enter Password");
-		String password = "[A-Za-z0-9]{8}$";
+		String password = "((?=.*[A-Z]).{8,})";
 		String inputPassword = sc.next();
 
 		UserRegistration ur = new UserRegistration();
 		System.out.println(ur.userName(firstName, inputFirstName));
 		System.out.println(ur.userName(lastName, inputLastName));
-		System.out.println(ur.userName(emailId, inputEmailId));
+		System.out.println(ur.userName(emailId, inputEmailId));// abc.xyz@bl.co.in
 		System.out.println(ur.userName(mobileNumber, inputmobileNumber));
 		System.out.println(ur.userName(password, inputPassword));
 
 	}
-
 }

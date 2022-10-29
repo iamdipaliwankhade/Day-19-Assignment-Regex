@@ -24,10 +24,10 @@ public class UserRegistration {
 
 		System.out.println("Enter Mobile Number");
 		String mobileNumber = "^(91)()[6-9]{1}[0-9]{9}$";
-		String inputmobileNumber = sc.next();
+		String inputmobileNumber = sc.next(); // 7879219494
 
 		System.out.println("Enter Password");
-		String password = "((?=.*[A-Z]).{8,})";
+		String password = "((?=.*[A-Z])(?=.*[0-9]).{8,})";
 		String inputPassword = sc.next();
 
 		UserRegistration ur = new UserRegistration();
@@ -38,4 +38,5 @@ public class UserRegistration {
 		System.out.println(ur.userName(password, inputPassword));
 
 	}
+
 }
